@@ -1,0 +1,13 @@
+project_id = "dakenxsmimgapixpvwey"
+
+[functions.admin-auth]
+verify_jwt = false
+
+[functions.admin-shop]
+verify_jwt = false
+
+[functions.setup-admin]
+verify_jwt = false
+
+[functions.upload-image]
+verify_jwt = false

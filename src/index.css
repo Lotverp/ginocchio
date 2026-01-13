@@ -1,0 +1,378 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minecraft Fantasy RPG Design System - Prominence II Theme */
+
+@layer base {
+  :root {
+    /* Light theme */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary: Magical Purple */
+    --primary: 280 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light violet */
+    --secondary: 260 30% 90%;
+    --secondary-foreground: 222 47% 11%;
+
+    /* Muted */
+    --muted: 210 20% 92%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent: Gold/Amber */
+    --accent: 40 90% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Special colors */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 85%;
+    --input: 214 20% 85%;
+    --ring: 280 80% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280 80% 55%), hsl(320 70% 50%));
+    --gradient-gold: linear-gradient(135deg, hsl(40 90% 50%), hsl(30 80% 40%));
+    --gradient-dark: linear-gradient(180deg, hsl(210 20% 96%), hsl(210 20% 92%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    
+    /* Glow effects */
+    --glow-primary: 0 0 30px hsl(280 80% 55% / 0.3);
+    --glow-gold: 0 0 30px hsl(40 90% 50% / 0.3);
+    --glow-intense: 0 0 60px hsl(280 80% 55% / 0.5);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 280 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 30% 90%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 20% 85%;
+    --sidebar-ring: 280 80% 55%;
+  }
+
+  .dark {
+    /* Dark fantasy theme */
+    --background: 240 15% 6%;
+    --foreground: 45 20% 95%;
+
+    --card: 240 12% 10%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 240 12% 10%;
+    --popover-foreground: 45 20% 95%;
+
+    /* Primary: Magical Purple */
+    --primary: 280 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Deep violet */
+    --secondary: 260 50% 20%;
+    --secondary-foreground: 45 20% 95%;
+
+    /* Muted: Dark gray */
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 60%;
+
+    /* Accent: Gold/Amber */
+    --accent: 40 90% 55%;
+    --accent-foreground: 240 15% 6%;
+
+    /* Special colors */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 30% 20%;
+    --input: 260 30% 20%;
+    --ring: 280 80% 60%;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280 80% 60%), hsl(320 70% 50%));
+    --gradient-gold: linear-gradient(135deg, hsl(40 90% 55%), hsl(30 80% 45%));
+    --gradient-dark: linear-gradient(180deg, hsl(240 15% 8%), hsl(240 15% 4%));
+    --gradient-card: linear-gradient(145deg, hsl(240 12% 12%), hsl(240 12% 8%));
+    
+    /* Glow effects */
+    --glow-primary: 0 0 30px hsl(280 80% 60% / 0.4);
+    --glow-gold: 0 0 30px hsl(40 90% 55% / 0.4);
+    --glow-intense: 0 0 60px hsl(280 80% 60% / 0.6);
+
+    /* Sidebar */
+    --sidebar-background: 240 12% 8%;
+    --sidebar-foreground: 45 20% 95%;
+    --sidebar-primary: 280 80% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 50% 20%;
+    --sidebar-accent-foreground: 45 20% 95%;
+    --sidebar-border: 260 30% 20%;
+    --sidebar-ring: 280 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    background: var(--gradient-dark);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-minecraft font-normal tracking-wide;
+  }
+}
+
+@layer components {
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-gold {
+    box-shadow: var(--glow-gold);
+  }
+
+  .glow-intense {
+    box-shadow: var(--glow-intense);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-minecraft {
+    @apply relative overflow-hidden rounded-xl border border-border;
+    background: var(--gradient-card);
+  }
+
+  .card-minecraft::before {
+    content: '';
+    @apply absolute inset-0 opacity-50;
+    background: radial-gradient(ellipse at top, hsl(280 80% 60% / 0.1), transparent 50%);
+  }
+
+  /* Minecraft pixel button style */
+  .btn-minecraft {
+    @apply relative px-6 py-3 font-minecraft text-sm transition-all duration-200;
+    background: linear-gradient(180deg, hsl(120 60% 45%) 0%, hsl(120 60% 35%) 100%);
+    border: 4px solid;
+    border-color: hsl(120 60% 55%) hsl(120 60% 25%) hsl(120 60% 25%) hsl(120 60% 55%);
+    box-shadow: inset 2px 2px 0 hsl(120 60% 60%), inset -2px -2px 0 hsl(120 60% 20%);
+    image-rendering: pixelated;
+  }
+
+  .btn-minecraft:hover {
+    background: linear-gradient(180deg, hsl(120 60% 50%) 0%, hsl(120 60% 40%) 100%);
+    transform: scale(1.02);
+  }
+
+  .btn-minecraft:active {
+    transform: scale(0.98);
+    border-color: hsl(120 60% 25%) hsl(120 60% 55%) hsl(120 60% 55%) hsl(120 60% 25%);
+  }
+
+  .btn-hero {
+    @apply relative px-8 py-4 font-display font-bold text-lg rounded-xl transition-all duration-300;
+    background: var(--gradient-primary);
+    box-shadow: var(--glow-primary);
+  }
+
+  .btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-intense);
+  }
+
+  .btn-gold {
+    @apply relative px-6 py-3 font-display font-semibold rounded-lg transition-all duration-300;
+    background: var(--gradient-gold);
+    color: hsl(240 15% 6%);
+    box-shadow: var(--glow-gold);
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+  }
+
+  .social-link {
+    @apply flex items-center justify-center w-12 h-12 rounded-xl border border-border bg-secondary/50 transition-all duration-300;
+  }
+
+  .social-link:hover {
+    @apply border-primary;
+    box-shadow: var(--glow-primary);
+    transform: translateY(-2px);
+  }
+
+  /* Minecraft skin viewer */
+  .skin-card {
+    @apply relative overflow-hidden rounded-xl border-2 border-border transition-all duration-300;
+    background: var(--gradient-card);
+  }
+
+  .skin-card:hover {
+    @apply border-primary;
+    box-shadow: var(--glow-primary);
+    transform: translateY(-4px);
+  }
+
+  .skin-card.selected {
+    @apply border-accent;
+    box-shadow: var(--glow-gold);
+  }
+
+  /* Video thumbnail style */
+  .video-card {
+    @apply relative overflow-hidden rounded-2xl border-2 border-border transition-all duration-500;
+    background: var(--gradient-card);
+  }
+
+  .video-card:hover {
+    @apply border-primary;
+    box-shadow: var(--glow-primary);
+    transform: scale(1.02);
+  }
+
+  .video-card::before {
+    content: '';
+    @apply absolute inset-0 z-10;
+    background: radial-gradient(circle at center, transparent 30%, hsl(var(--background)) 100%);
+  }
+
+  /* Pixelated overlay for Minecraft feel */
+  .pixel-overlay {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9InJnYmEoMCwwLDAsMC4wNSkiLz48L3N2Zz4=');
+    background-repeat: repeat;
+  }
+
+  .dark .pixel-overlay {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9InJnYmEoMCwwLDAsMC4xKSIvPjwvc3ZnPg==');
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(280 80% 60% / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(280 80% 60% / 0.7);
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      filter: brightness(1) drop-shadow(0 0 10px hsl(280 80% 60% / 0.5));
+    }
+    50% {
+      filter: brightness(1.2) drop-shadow(0 0 20px hsl(280 80% 60% / 0.8));
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Staggered animation delays */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+}

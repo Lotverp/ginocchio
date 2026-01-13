@@ -1,8 +1,0 @@
-{
-  "name": "Gemini Code Architect",
-  "description": "A high-end code analysis and modification suite designed to bridge GitHub repositories with Gemini's advanced reasoning capabilities. Paste your source code to analyze, refactor, and generate new features seamlessly.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ]
-}
